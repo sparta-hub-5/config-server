@@ -18,7 +18,7 @@ spring:
           default-label: main
           search-paths:
             - configs
-            - configs/{application}
+            - configs/*
           basedir: configs_cache
           clone-on-start: true
 
