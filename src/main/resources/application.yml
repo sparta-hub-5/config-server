@@ -17,8 +17,7 @@ spring:
           uri: https://github.com/sparta-hub-5/project-configs
           default-label: main
           search-paths:
-            - configs
-            - configs/*
+            - configs/{application}
           basedir: configs_cache
           clone-on-start: true
 
