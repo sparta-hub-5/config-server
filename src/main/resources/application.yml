@@ -23,11 +23,26 @@ spring:
 eureka:
   instance:
     prefer-ip-address: false
-    hostname: localhost
+    hostname: config-server
 
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:3150/eureka/
+      defaultZone: http://eureka-server:3150/eureka/
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,prometheus,metrics
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+      export:
+        prometheus:
+          enabled: true
+      tags:
+        application: ${spring.application.name}
