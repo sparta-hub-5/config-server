@@ -49,7 +49,7 @@ management:
 
   zipkin:
     tracing:
-      endpoint: "https://zipkin.code-factory.co.kr/api/v2/spans"
+      endpoint: "http://13.210.162.214:9500/api/v2/spans"
   tracing:
     sampling:
       probability: 1.0
